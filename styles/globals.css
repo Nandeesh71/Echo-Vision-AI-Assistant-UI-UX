@@ -6,25 +6,25 @@
 
 :root {
   --radius: 1.5rem;
-  --background: #0B0F14;
-  --foreground: #F8FAFC;
-  --card: #161B22;
-  --card-foreground: #F8FAFC;
-  --popover: #161B22;
-  --popover-foreground: #F8FAFC;
-  --primary: #22D3EE;
-  --primary-foreground: #0B0F14;
-  --secondary: #1E293B;
-  --secondary-foreground: #F8FAFC;
-  --muted: #1E293B;
-  --muted-foreground: #94A3B8;
-  --accent: #22D3EE;
-  --accent-foreground: #0B0F14;
-  --destructive: #EF4444;
-  --destructive-foreground: #F8FAFC;
+  --background: #0b0f14;
+  --foreground: #f8fafc;
+  --card: #161b22;
+  --card-foreground: #f8fafc;
+  --popover: #161b22;
+  --popover-foreground: #f8fafc;
+  --primary: #22d3ee;
+  --primary-foreground: #0b0f14;
+  --secondary: #1e293b;
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #22d3ee;
+  --accent-foreground: #0b0f14;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.08);
-  --ring: #22D3EE;
+  --ring: #22d3ee;
 
   /* Glassmorphism tokens - Optimized */
   --glass-bg: rgba(11, 15, 20, 0.8);
@@ -71,8 +71,10 @@ body::-webkit-scrollbar {
 }
 
 @theme inline {
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

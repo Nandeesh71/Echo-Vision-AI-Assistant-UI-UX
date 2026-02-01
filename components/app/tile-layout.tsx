@@ -88,10 +88,12 @@ export function TileLayout({ chatOpen }: TileLayoutProps) {
   const isAvatar = agentVideoTrack !== undefined;
 
   return (
-    <div className={cn(
-      "pointer-events-none fixed inset-0 z-30 flex justify-center p-6 transition-all duration-700 md:p-12",
-      chatOpen ? "items-start pt-8 pb-0 h-48" : "items-center"
-    )}>
+    <div
+      className={cn(
+        'pointer-events-none fixed inset-0 z-30 flex justify-center p-6 transition-all duration-700 md:p-12',
+        chatOpen ? 'h-48 items-start pt-8 pb-0' : 'items-center'
+      )}
+    >
       <div className="relative flex h-full w-full items-center justify-center">
         {/* Agent Central Visualizer */}
         <div className="relative flex items-center justify-center">
@@ -104,10 +106,14 @@ export function TileLayout({ chatOpen }: TileLayoutProps) {
                 className="relative flex items-center justify-center will-change-transform"
               >
                 {/* Visualizer Glow */}
-                <div className={cn(
-                  "bg-primary/5 absolute rounded-full blur-[64px] transition-all duration-700 will-change-[filter,opacity,transform]",
-                  chatOpen ? "h-[200px] w-[200px]" : "h-[300px] w-[300px] md:h-[500px] md:w-[500px]"
-                )} />
+                <div
+                  className={cn(
+                    'bg-primary/5 absolute rounded-full blur-[64px] transition-all duration-700 will-change-[filter,opacity,transform]',
+                    chatOpen
+                      ? 'h-[200px] w-[200px]'
+                      : 'h-[300px] w-[300px] md:h-[500px] md:w-[500px]'
+                  )}
+                />
 
                 <AgentAudioVisualizerBar
                   barCount={7}
@@ -126,14 +132,11 @@ export function TileLayout({ chatOpen }: TileLayoutProps) {
                 exit={{ opacity: 0, filter: 'blur(20px)' }}
                 transition={{ duration: 0.8, ease: 'easeOut' }}
                 className={cn(
-                  "overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-all duration-700",
-                  chatOpen ? "h-[120px] w-[120px]" : "h-[300px] w-full max-w-lg md:h-[450px]"
+                  'overflow-hidden rounded-3xl border border-white/10 shadow-2xl transition-all duration-700',
+                  chatOpen ? 'h-[120px] w-[120px]' : 'h-[300px] w-full max-w-lg md:h-[450px]'
                 )}
               >
-                <VideoTrack
-                  trackRef={agentVideoTrack}
-                  className="h-full w-full object-cover"
-                />
+                <VideoTrack trackRef={agentVideoTrack} className="h-full w-full object-cover" />
               </MotionContainer>
             )}
           </AnimatePresence>

@@ -40,8 +40,8 @@ export function App({ appConfig }: AppProps) {
         body: JSON.stringify({
           room_config: appConfig.agentName
             ? {
-              agents: [{ agent_name: appConfig.agentName }],
-            }
+                agents: [{ agent_name: appConfig.agentName }],
+              }
             : undefined,
         }),
       });

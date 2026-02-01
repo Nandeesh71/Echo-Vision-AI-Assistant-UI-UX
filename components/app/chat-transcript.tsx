@@ -62,7 +62,7 @@ export function ChatTranscript({
             <AgentChatTranscript
               agentState={agentState}
               messages={messages}
-              className="mx-auto w-full max-w-2xl px-4 md:px-0 [&_.is-user>div]:bg-primary [&_.is-user>div]:text-black [&_.is-user>div]:rounded-[28px] [&_.is-agent>div]:bg-white/5 [&_.is-agent>div]:text-white [&_.is-agent>div]:rounded-[28px] [&_.is-agent>div]:border [&_.is-agent>div]:border-white/10 [&>div>div]:px-4 [&>div>div]:pb-60 [&>div>div]:pt-48 md:[&>div>div]:px-6"
+              className="[&_.is-user>div]:bg-primary mx-auto w-full max-w-2xl px-4 md:px-0 [&_.is-agent>div]:rounded-[28px] [&_.is-agent>div]:border [&_.is-agent>div]:border-white/10 [&_.is-agent>div]:bg-white/5 [&_.is-agent>div]:text-white [&_.is-user>div]:rounded-[28px] [&_.is-user>div]:text-black [&>div>div]:px-4 [&>div>div]:pt-48 [&>div>div]:pb-60 md:[&>div>div]:px-6"
             />
           </MotionContainer>
         )}

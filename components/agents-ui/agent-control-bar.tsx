@@ -67,7 +67,7 @@ interface AgentChatInputProps {
   className?: string;
 }
 
-function AgentChatInput({ chatOpen, onSend = async () => { }, className }: AgentChatInputProps) {
+function AgentChatInput({ chatOpen, onSend = async () => {}, className }: AgentChatInputProps) {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState<string>('');
@@ -274,7 +274,7 @@ export function AgentControlBar({
     <div
       aria-label="Voice assistant controls"
       className={cn(
-        'mx-auto mb-6 flex w-fit flex-col items-center gap-2 rounded-[50px] border border-white/10 bg-[#0B0F14]/80 p-2 backdrop-blur-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-300 md:mb-12',
+        'mx-auto mb-6 flex w-fit flex-col items-center gap-2 rounded-[50px] border border-white/10 bg-[#0B0F14]/80 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-3xl transition-all duration-300 md:mb-12',
         className
       )}
       {...props}
@@ -288,7 +288,7 @@ export function AgentControlBar({
         <AgentChatInput
           chatOpen={isChatOpen || isChatOpenUncontrolled}
           onSend={handleSendMessage}
-          className="bg-white/5 rounded-2xl border border-white/10 px-4"
+          className="rounded-2xl border border-white/10 bg-white/5 px-4"
         />
       </motion.div>
 
@@ -307,7 +307,7 @@ export function AgentControlBar({
               onPressedChange={microphoneToggle.toggle}
               onActiveDeviceChange={handleAudioDeviceChange}
               onMediaDeviceError={handleMicrophoneDeviceSelectError}
-              className="hover:bg-white/10 rounded-full text-white transition-colors [&_button]:rounded-full"
+              className="rounded-full text-white transition-colors hover:bg-white/10 [&_button]:rounded-full"
             />
           )}
 
@@ -324,7 +324,7 @@ export function AgentControlBar({
               onPressedChange={cameraToggle.toggle}
               onMediaDeviceError={handleCameraDeviceSelectError}
               onActiveDeviceChange={handleVideoDeviceChange}
-              className="hover:bg-white/10 rounded-full text-white transition-colors [&_button]:rounded-full"
+              className="rounded-full text-white transition-colors hover:bg-white/10 [&_button]:rounded-full"
             />
           )}
 
@@ -337,7 +337,7 @@ export function AgentControlBar({
               pressed={screenShareToggle.enabled}
               disabled={screenShareToggle.pending}
               onPressedChange={screenShareToggle.toggle}
-              className="hover:bg-white/10 rounded-full text-white transition-colors"
+              className="rounded-full text-white transition-colors hover:bg-white/10"
             />
           )}
 
@@ -352,8 +352,9 @@ export function AgentControlBar({
                 else onIsChatOpenChange(state);
               }}
               className={cn(
-                "hover:bg-white/10 rounded-full text-white transition-colors",
-                (isChatOpen || isChatOpenUncontrolled) && "bg-primary/20 text-primary hover:bg-primary/30"
+                'rounded-full text-white transition-colors hover:bg-white/10',
+                (isChatOpen || isChatOpenUncontrolled) &&
+                  'bg-primary/20 text-primary hover:bg-primary/30'
               )}
             >
               <MessageSquareTextIcon className="size-5" />
@@ -369,7 +370,7 @@ export function AgentControlBar({
           <AgentDisconnectButton
             onClick={onDisconnect}
             disabled={!isConnected}
-            className="bg-[#EF4444] hover:bg-[#EF4444]/90 text-white h-10 rounded-full px-6 text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-red-500/10"
+            className="h-10 rounded-full bg-[#EF4444] px-6 text-xs font-bold tracking-wider text-white uppercase shadow-lg shadow-red-500/10 transition-all duration-300 hover:scale-[1.02] hover:bg-[#EF4444]/90"
           >
             {isConnected ? (
               <>
@@ -377,7 +378,7 @@ export function AgentControlBar({
                 <span className="inline md:hidden">End</span>
               </>
             ) : (
-              "Connect"
+              'Connect'
             )}
           </AgentDisconnectButton>
         )}

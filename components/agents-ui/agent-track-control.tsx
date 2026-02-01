@@ -315,7 +315,8 @@ export function AgentTrackControl({
           onActiveDeviceChange={onActiveDeviceChange}
           className={cn([
             'relative',
-            variant !== 'ghost' && 'before:bg-border before:absolute before:inset-y-0 before:left-0 before:my-2.5 before:w-px has-[~_button]:before:content-[""]',
+            variant !== 'ghost' &&
+              'before:bg-border before:absolute before:inset-y-0 before:left-0 before:my-2.5 before:w-px has-[~_button]:before:content-[""]',
             !pressed && variant !== 'ghost' && 'before:bg-destructive/20',
           ])}
         />
